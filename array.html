@@ -12,7 +12,19 @@
     var cars = ['bnw', 'mercedes', 'Honda']
     document.getElementById("array").innerHTML = cars;
     document.getElementById("array").innerHTML = cars[1]
-    document.getElementById("array").innerHTML = cars.length
-    document.getElementById("array").innerHTML = cars[cars.length -1]
+    document.getElementById("array").innerHTML = cars.length // length
+    document.getElementById("array").innerHTML = cars[cars.length -1]  // last item
+    
+
+    cars.forEach((item, index, array)=>[console.log(item, index)]); 
+
+    document.getElementById("array").innerHTML = cars.toString(); // convert array into string
+    last = cars.pop();  // remove last emelent from array
+    document.getElementById("array").innerHTML = cars; 
+    
+    cars.push('Audi')
+    document.getElementById("array").innerHTML = cars; 
+
+
 </script>
 </html>
