@@ -9,22 +9,38 @@
     <p id="array"></p>
 </body>
 <script>
-    var cars = ['bnw', 'mercedes', 'Honda']
-    document.getElementById("array").innerHTML = cars;
-    document.getElementById("array").innerHTML = cars[1]
-    document.getElementById("array").innerHTML = cars.length // length
-    document.getElementById("array").innerHTML = cars[cars.length -1]  // last item
+    var cars = ['bmw', 'mercedes', 'Honda']
+    // document.getElementById("array").innerHTML = cars;
+    // document.getElementById("array").innerHTML = cars[1]
+    // document.getElementById("array").innerHTML = cars.length // length
+    // document.getElementById("array").innerHTML = cars[cars.length -1]  // last item
     
 
-    cars.forEach((item, index, array)=>[console.log(item, index)]); 
+    // cars.forEach((item, index, array)=>[console.log(item, index)]); 
 
-    document.getElementById("array").innerHTML = cars.toString(); // convert array into string
-    last = cars.pop();  // remove last emelent from array
-    document.getElementById("array").innerHTML = cars; 
+    // document.getElementById("array").innerHTML = cars.toString(); // convert array into string
+    // last = cars.pop();  // remove last emelent from array
+    // document.getElementById("array").innerHTML = cars; 
     
-    cars.push('Audi')
-    document.getElementById("array").innerHTML = cars; 
+    // cars.push('Audi')
+    // document.getElementById("array").innerHTML = cars; 
 
-
+    // first = cars.shift()  // remove first element
+    // document.getElementById("array").innerHTML = cars;  
+    
+    
+    // addfirst = cars.unshift('KIA')      // add element at first
+    
+    // document.getElementById("array").innerHTML = cars;  
+    
+    let bikes = ['yamaha', 'suzuki', 'bionic']
+    
+    vehicles = cars.concat(bikes);      // joiin two arrays
+    document.getElementById("array").innerHTML = vehicles; 
+    
+    // vehicles.sort()
+    // document.getElementById("array").innerHTML = vehicles; 
+    vehicles.reverse()
+    document.getElementById("array").innerHTML = vehicles; 
 </script>
 </html>
