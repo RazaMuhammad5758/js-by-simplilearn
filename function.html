@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+
+    <!-- <script>
+        function square(val){
+            
+            document.getElementById('demo').innerHTML = val*val
+        }
+        square(5) 
+        </script> -->
+    <script>
+        var myfunc = new Function("a","b","return a+b")
+        var x = myfunc(2,3)
+        document.getElementById('demo').innerHTML = 'the sum is ' + x
+
+
+
+    </script>
+
+    <script>
+
+        (function(){                // self invoking function
+            document.write('hello welcome')
+        })()
+    </script>
+</body>
+</html>
