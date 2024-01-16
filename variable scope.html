@@ -8,19 +8,18 @@
 <body>
     <p id="demo">
 
+
     </p>
 
-    <!-- Eval -->
     <script>
         const body = document.getElementById("demo")
-        let x = 3
-        let y = 4
-        let z = 6
+        let a = 5
 
-        console.log(eval("x+y+z"))
-
+        function myfunc(){
+            b = 4
+            body.innerHTML = a+b
+        }
+        myfunc()
     </script>
-
-    
 </body>
 </html>
