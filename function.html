@@ -30,7 +30,7 @@
         (function(){                // self invoking function
             document.write('hello welcome')
         })()
-    </script>
+        </script>
 
     <script>
         // function as an object 
@@ -38,6 +38,17 @@
         var body = "return Math.PI * rad * rad"
         var circle = new Function ("rad", body);
         alert(circle(5))
+    </script>
+
+    <script>
+        
+        // array function 
+        const  Tyfunc = (a,b,c)=> { return a*b*c}
+        let product = Tyfunc(3,5,7)
+        
+        document.getElementById('demo').innerHTML = "the product of three no is" + product
+
+
     </script>
 </body>
 </html>
