@@ -7,7 +7,14 @@
 </head>
 <body>
     <script>
-        
+        let result = function(score){
+            return new Promise(function(resolve, reject){
+                console.log("Calculating results....");
+                if (score>50){
+                    console.log("Congratulations! You have passed")
+                }
+            })
+        }
     </script>
 </body>
 </html>
