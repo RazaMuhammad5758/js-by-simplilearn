@@ -30,24 +30,24 @@
             })
         }
 
-        let engine = function(){
+        let engine = function(msg){
             return new Promise(function(resolve, reject){
-                resolve("The car is over heated")
+                resolve(msg+"The car is over heated")
             })
         }
 
-        let drive = function(){
+        let drive = function(msg){
             return new Promise(function(resolve, reject){
-                resolve("The car is not ready to travel")
+                resolve(msg+"The car is not ready to travel")
             })
         }
 
-        empty_tank().then(function(){
-                return engine()
-        }).then(function(){
-                return drive()
-        }).then(function(){
-            console.log("Done")
+        empty_tank().then(function(result){
+                return engine(result)
+        }).then(function(result){
+                return drive(result)
+        }).then(function(result){
+            console.log("Done "+result)
         })
 
 
