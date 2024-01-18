@@ -11,10 +11,30 @@
             return new Promise(function(resolve, reject){
                 console.log("Calculating results....");
                 if (score>50){
-                    console.log("Congratulations! You have passed")
+                    resolve("Congratulations! You have passed")
+                }
+                else{
+                    reject("You are failed")
                 }
             })
         }
+
+        let grade = function(response){
+            return new Promise(function(resolve, reject){
+                console.log("Calculating your Grade")
+                resolve("Your Grade is A"+ response)
+            })
+        }
+
+        result(80).then(response=>{
+            console.log("Result Recieved")
+            return grade(response)
+        }).then(finalGrade=>{
+            console.log(finalGrade)
+        
+        }).catch(err =>{
+            console.log(err)
+        })
     </script>
 </body>
 </html>
