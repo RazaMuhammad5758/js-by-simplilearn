@@ -26,15 +26,32 @@
             })
         }
 
-        result(80).then(response=>{
-            console.log("Result Recieved")
-            return grade(response)
-        }).then(finalGrade=>{
-            console.log(finalGrade)
+        // old method 
+
+        // result(80).then(response=>{
+        //     console.log("Result Recieved")
+        //     return grade(response)
+        // }).then(finalGrade=>{
+        //     console.log(finalGrade)
         
-        }).catch(err =>{
-            console.log(err)
-        })
+        // }).catch(err =>{
+        //     console.log(err)
+        // })
+
+        // async method 
+
+        async function calculateResult(){
+            try{
+                const response = await result(30)
+                console.log("Result Recieved")
+
+                const finalGrade = await grade(response)
+                console.log(finalGrade)
+            }
+            catch(err){
+                console.log(err)
+            }
+        }calculateResult()
     </script>
 </body>
 </html>
