@@ -15,5 +15,18 @@
             alert("This value: " + this.value)
         }My_Function()
     </script>
+
+    <script>
+        const random = {
+            name: "Tutorial",
+            video: ["Javascript", "This", "Keyword"],
+            info(){
+                this.video.forEach(function(tag){
+                    console.log(this.name, tag)
+                }, this)
+            }
+        }
+        random.info()
+    </script>
 </body>
 </html>
