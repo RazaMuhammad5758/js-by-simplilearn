@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form valid.</title>
     <script>
-
+        function validation(){
+            if(document.myForm.Email.value==""){
+                alert("Please Enter Email")
+            }else if(document.myForm.Password.value==""){
+                alert("Please Enter Password")
+            }
+        }
     </script>
 </head>
 <body>
-    <form action="welcome.html></form>
+    <form action="welcome.html" name="myForm">
+        <input type="text" name="Email" placeholder="Email"><br>
+        <input type="text" name="Password" placeholder="Password"><br>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
