@@ -8,14 +8,21 @@
         function validation(){
             if(document.myForm.Email.value==""){
                 alert("Please Enter Email")
+                document.myForm.Email.focus()
+                return false
             }else if(document.myForm.Password.value==""){
                 alert("Please Enter Password")
+                document.myForm.Password.focus()
+                return false
+            }
+            else{
+                return true
             }
         }
     </script>
 </head>
 <body>
-    <form action="welcome.html" name="myForm">
+    <form action="welcome.html" name="myForm" onsubmit="return (validation())">
         <input type="text" name="Email" placeholder="Email"><br>
         <input type="text" name="Password" placeholder="Password"><br>
         <button type="submit">Submit</button>
