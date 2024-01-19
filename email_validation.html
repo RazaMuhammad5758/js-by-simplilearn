@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+    <script>
+        function validation(){
+            var mail = document.getElementById("text").value; 
+
+            var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+
+            if(regx.test(mail)){
+                alert("Your email is valid")
+                return true
+            }else{
+                alert("Your email is invalid")
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form  >
+        <input type="text" id="text" placeholder="Email">
+        <button  onclick="validation()" type="button">Submit</button>
+    </form>
+</body>
+</html>
