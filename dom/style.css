@@ -62,5 +62,36 @@ h1, h2{
 }
 .delete:hover{
     background-color: maroon;
-    
+
+}
+.add-movie{
+    width: 400px;
+    margin: 0 auto;
+}
+.add-movie input{
+    display: block;
+    margin: 20px 0px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 300px;
+    float: left;
+    clear: both;
+}
+.add-movie button{
+    border: 1px solid green;
+    background-color: green;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 100px;
+    float: left;
+    margin: 20px 0;
+    border-left: 0;
+    color: white;
 }
